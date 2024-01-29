@@ -144,7 +144,6 @@ int main()
     // Seed the random number generator
     srand(time(NULL));
 
-    // Example usage
     short A[TK_K * TK_K * TK_N];
     short t[TK_K * TK_N];
     short s[TK_K];
@@ -155,13 +154,11 @@ int main()
     toy_gen(A, t, s);
 
     // Encrypt
-    int plain = 7; // Example plaintext
+    int plain = 5; // Example plaintext should be from 0 to 15
     toy_enc(A, t, plain, u, v);
 
     // Decrypt
     int decrypted = toy_dec(s, u, v);
-
-
     printf("Plaintext: %d\n", plain);
     printf("Decrypted: %d\n", decrypted);
 
